@@ -12,6 +12,7 @@ public class RegisterPage  {
     public String getTextLblRegister(){
          WebElement lblRegister = driver.findElement(By.xpath("//h1[text()='Register']"));
         return lblRegister.getText();
+        // Add test git 1
     }
     public void selectGender(){
         WebElement rdoGenderMale = driver.findElement(By.id("gender-female"));
