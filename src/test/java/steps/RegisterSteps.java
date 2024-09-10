@@ -1,18 +1,12 @@
-package Steps;
+package steps;
 
-import Common.BaseTest;
-import Page.RegisterPage;
+import common.BaseTest;
+import page.RegisterPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterSteps extends BaseTest {
-
-    RegisterPage registerPage = new RegisterPage(driver);
-
-    public RegisterSteps(WebDriver driver) {
-        super(driver);
-    }
+public class RegisterSteps  {
+    RegisterPage registerPage;
 
     @Step
     public void checkLblRegister(){

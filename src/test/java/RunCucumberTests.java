@@ -1,17 +1,17 @@
-import io.cucumber.testng.CucumberOptions;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.junit.runner.RunWith;
-import net.serenitybdd.cucumber.*;
-import org.testng.annotations.Test;
+import io.cucumber.junit.platform.engine.Constants;
+import org.junit.platform.suite.api.ConfigurationParameter;
 
-@RunWith(CucumberWithSerenity.class)
-@CucumberOptions(
-        features = "src/test/resources/feature",
-        glue = {"src/test/java/Defs"},
-        plugin = {"pretty", "html:target/cucumber-html-report.html"}
-)
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-@Test
-public class RunCucumberTests extends AbstractTestNGCucumberTests{
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("feature")
+@ConfigurationParameter(key = Constants.FEATURES_PROPERTY_NAME,value = "src/test/resources/feature")
+@ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME,value = "defs")
+@ConfigurationParameter(key = Constants.EXECUTION_DRY_RUN_PROPERTY_NAME,value = "false")
+@ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "html:target/site/serenity/index.html")
+public class RunCucumberTests {
 
 }
