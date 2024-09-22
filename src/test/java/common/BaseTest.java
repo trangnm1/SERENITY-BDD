@@ -21,7 +21,8 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.get("https://demowebshop.tricentis.com/");
+        //driver.get("https://demowebshop.tricentis.com/");
+        driver.get("https://tenderfyfe.vercel.app/");
     }
 
     public void closeBrowser(){

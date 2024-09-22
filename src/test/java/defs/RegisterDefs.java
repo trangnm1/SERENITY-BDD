@@ -170,6 +170,8 @@ public class RegisterDefs extends BaseTest{
         computerMenu.click();
 
     }
+
+
 //
 //    @Then("Menu items displaying correctly")
 //    public void menuItemsDisplayingCorrectly() {

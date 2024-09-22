@@ -8,7 +8,7 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("feature")
-@ConfigurationParameter(key = Constants.FEATURES_PROPERTY_NAME,value = "src/test/resources/feature")
+@ConfigurationParameter(key = Constants.FEATURES_PROPERTY_NAME,value = "src/test/resources/feature/tenderfyfe.feature")
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME,value = "defs")
 @ConfigurationParameter(key = Constants.EXECUTION_DRY_RUN_PROPERTY_NAME,value = "false")
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "html:target/site/serenity/index.html")
